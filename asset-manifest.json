@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/responsive-fine-dining-page/static/css/main.70f29491.css",
-    "main.js": "/responsive-fine-dining-page/static/js/main.be7a382d.js",
+    "main.css": "/responsive-fine-dining-page/static/css/main.60c0662a.css",
+    "main.js": "/responsive-fine-dining-page/static/js/main.eff25e0f.js",
     "static/media/meal.mp4": "/responsive-fine-dining-page/static/media/meal.a1b6c6dc67dfa2f99343.mp4",
     "static/media/bg.png": "/responsive-fine-dining-page/static/media/bg.3d421b1b5682e1b67deb.png",
     "static/media/welcome.png": "/responsive-fine-dining-page/static/media/welcome.d724eb984456d9c97470.png",
@@ -24,11 +24,11 @@
     "static/media/sign.png": "/responsive-fine-dining-page/static/media/sign.9bf0bd90ad4caa17991f.png",
     "index.html": "/responsive-fine-dining-page/index.html",
     "static/media/spoon.svg": "/responsive-fine-dining-page/static/media/spoon.d079f43fbcf509908d3865293080795a.svg",
-    "main.70f29491.css.map": "/responsive-fine-dining-page/static/css/main.70f29491.css.map",
-    "main.be7a382d.js.map": "/responsive-fine-dining-page/static/js/main.be7a382d.js.map"
+    "main.60c0662a.css.map": "/responsive-fine-dining-page/static/css/main.60c0662a.css.map",
+    "main.eff25e0f.js.map": "/responsive-fine-dining-page/static/js/main.eff25e0f.js.map"
   },
   "entrypoints": [
-    "static/css/main.70f29491.css",
-    "static/js/main.be7a382d.js"
+    "static/css/main.60c0662a.css",
+    "static/js/main.eff25e0f.js"
   ]
 }
