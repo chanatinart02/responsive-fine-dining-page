@@ -5,67 +5,91 @@ import images from "../../constants/images";
 
 import "./Navbar.css";
 
-// create Menu link to component
-const MenuLinks = () => (
-  <>
-    <li className="p__opensans">
-      <a href="#home">Home</a>
-    </li>
-    <li className="p__opensans">
-      <a href="#about">About</a>
-    </li>
-    <li className="p__opensans">
-      <a href="#menu">Menu</a>
-    </li>
-    <li className="p__opensans">
-      <a href="#awards">Awards</a>
-    </li>
-    <li className="p__opensans">
-      <a href="#contact">Contact</a>
-    </li>
-  </>
-);
-
 const Navbar = () => {
-  const [toggleMenu, setToggleMenu] = useState(false);
+  // State to control the mobile menu toggle
+  const [toggleMenu, setToggleMenu] = React.useState(false);
 
   return (
     <nav className="app__navbar">
+      {/* Logo */}
       <div className="app__navbar-logo">
-        <img src={images.gericht} alt="logo" />
+        <img src={images.gericht} alt="app__logo" />
       </div>
-      {/* Menu link */}
+
+      {/* Navigation links */}
       <ul className="app__navbar-links">
-        <MenuLinks />
+        <li className="p__opensans">
+          <a href="#home">Home</a>
+        </li>
+        <li className="p__opensans">
+          <a href="#about">About</a>
+        </li>
+        <li className="p__opensans">
+          <a href="#menu">Menu</a>
+        </li>
+        <li className="p__opensans">
+          <a href="#awards">Awards</a>
+        </li>
+        <li className="p__opensans">
+          <a href="#contact">Contact</a>
+        </li>
       </ul>
+
+      {/* Login and Book Table links */}
       <div className="app__navbar-login">
         <a href="#login" className="p__opensans">
-          Log In / Register
+          Log In / Registration
         </a>
-        <div></div> {/* vertical line */}
+        <div /> {/* Vertical line */}
         <a href="/" className="p__opensans">
-          Books Table
+          Book Table
         </a>
       </div>
 
-      {/* for mobile menu */}
+      {/* Mobile menu icon */}
       <div className="app__navbar-smallscreen">
         <GiHamburgerMenu
           color="#fff"
           fontSize={27}
           onClick={() => setToggleMenu(true)}
         />
-        {/* toggle menu = true and show */}
+        {/* Toggle menu is true and visible */}
         {toggleMenu && (
-          <div className="app__navbar-smallscreen_overlay flex_center slide-bottom">
+          <div className="app__navbar-smallscreen_overlay flex__center slide-bottom">
+            {/* Close menu icon */}
             <MdRestaurantMenu
               fontSize={27}
               className="overlay__close"
               onClick={() => setToggleMenu(false)}
             />
-            {/* Menu link */}
+            {/* Mobile menu links */}
             <ul className="app__navbar-smallscreen_links">
-              <MenuLinks />
+              <li>
+                {/* Close menu on link click */}
+                <a href="#home" onClick={() => setToggleMenu(false)}>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#about" onClick={() => setToggleMenu(false)}>
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#menu" onClick={() => setToggleMenu(false)}>
+                  Menu
+                </a>
+              </li>
+              <li>
+                <a href="#awards" onClick={() => setToggleMenu(false)}>
+                  Awards
+                </a>
+              </li>
+              <li>
+                <a href="#contact" onClick={() => setToggleMenu(false)}>
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
         )}
